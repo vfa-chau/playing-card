@@ -1,0 +1,11 @@
+/node_modules
+/vendor
+/.env
+/public/css
+/public/js
+/public/fonts
+/public/build
+/public/test_coverage
+/.phpunit.result.cache
+/server/my.cnf/
+.php-cs-fixer.cache

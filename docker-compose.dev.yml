@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  mysql:
+    volumes:
+    - data-mysql:/var/lib/mysql
+  php:
+    image: tyrell_php:latest
+    build:
+      context: .
+      dockerfile: ./server/Dockerfile
+    volumes:
+    - .:/server
+  web:
+    ports:
+    - "8000:80"
+    volumes:
+    - .:/server
+
+volumes:
+  data-mysql:
+    driver: local

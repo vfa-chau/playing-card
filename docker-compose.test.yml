@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: ./server/Dockerfile
+    volumes:
+    - .:/server
+  web:
+    volumes:
+    - .:/server
+
